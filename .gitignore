@@ -1,5 +1,0 @@
-__pycache__
-.pytest_cache
-test/geckodriver.log
-.gitignore
-geckodriver.log
