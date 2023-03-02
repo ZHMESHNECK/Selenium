@@ -20,7 +20,7 @@ import time
     login_page = page.go_to_login_page()
     time.sleep(5)
     login_page.should_be_login_page()'''
-
+## ! 2
 def test_guest_can_go_to_login_page(browser):
     link = "http://selenium1py.pythonanywhere.com"
     page = MainPage(browser, link)
