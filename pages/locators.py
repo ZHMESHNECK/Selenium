@@ -11,7 +11,8 @@ class LoginPageLocators:
 class ProductPageLocators:
     buy_btn = (By.CLASS_NAME, 'btn.btn-lg.btn-primary.btn-add-to-basket')
     desc_table = (By.CLASS_NAME, 'table.table-striped')
-    price = (By.CLASS_NAME, 'price_color')
+    price = (By.XPATH, '//div[@class="col-sm-6 product_main"]/p[1]')
     success_buy = (By.CLASS_NAME, 'alert.alert-safe.alert-noicon.alert-success.fade.in')
     title = (By.XPATH, '//div[@class="col-sm-6 product_main"]/h1')
     alert_title = (By.CSS_SELECTOR, '#messages strong')
+    alert_price =(By.XPATH, '//div[@class="alert alert-safe alert-noicon alert-info  fade in"]/div/p/strong')

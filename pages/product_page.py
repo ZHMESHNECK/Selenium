@@ -2,6 +2,7 @@ from .base_page import BasePage
 from .locators import ProductPageLocators
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import time
 
 class ProductPage(BasePage):
     def should_be_object_page(self):
@@ -36,3 +37,9 @@ class ProductPage(BasePage):
         title_2 = WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located(ProductPageLocators.alert_title))
         title_2 = self.browser.find_element(*ProductPageLocators.alert_title)
         assert title_1_text == title_2.text, 'success alert has another named of title'
+    
+    def check_price_Basket_total(self):
+        price = self.browser.find_element(*ProductPageLocators.price)
+        price_text = price.text
+        price_2 = WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located(ProductPageLocators.alert_price))
+        assert price_text == price_2.text, 'different prices'
