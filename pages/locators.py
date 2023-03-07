@@ -20,8 +20,12 @@ class ProductPageLocators:
     alert_title = (By.CSS_SELECTOR, '#messages strong')
     alert_price = (
         By.XPATH, '//div[@class="alert alert-safe alert-noicon alert-info  fade in"]/div/p/strong')
-    SUCCESS_MESSAGE = (By.CLASS_NAME,'alert.alert-safe.alert-noicon.alert-success.fade.in')
+    SUCCESS_MESSAGE = (
+        By.CLASS_NAME, 'alert.alert-safe.alert-noicon.alert-success.fade.in')
+
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    basket = (By.XPATH, '//div[@class="basket-mini pull-right hidden-xs"]/span/a')
+    basket_items = (By.ID, 'basket_formset')
