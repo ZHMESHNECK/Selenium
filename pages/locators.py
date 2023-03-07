@@ -8,6 +8,10 @@ class MainPageLocators:
 class LoginPageLocators:
     L_FORM = (By.CSS_SELECTOR, '#login_form')
     R_FORM = (By.CSS_SELECTOR, '#register_form')
+    R_FORM_email = (By.ID, 'id_registration-email')
+    R_FORM_pass1 = (By.ID, 'id_registration-password1')
+    R_FORM_pass2 = (By.ID, 'id_registration-password2')
+    R_FORM_submit = (By.NAME, 'registration_submit')
 
 
 class ProductPageLocators:
@@ -29,3 +33,4 @@ class BasePageLocators():
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     basket = (By.XPATH, '//div[@class="basket-mini pull-right hidden-xs"]/span/a')
     basket_items = (By.ID, 'basket_formset')
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
