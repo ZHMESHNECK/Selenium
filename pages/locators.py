@@ -31,6 +31,7 @@ class ProductPageLocators:
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
-    basket = (By.XPATH, '//div[@class="basket-mini pull-right hidden-xs"]/span/a')
+    basket = (
+        By.XPATH, '//div[@class="basket-mini pull-right hidden-xs"]/span/a')
     basket_items = (By.ID, 'basket_formset')
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
